@@ -47,7 +47,6 @@ class EnsemblRestClient(object):
                     time.sleep(float(retry))
                     self.perform_rest_action(endpoint, hdrs, params)
             else:
-                print e.headers
                 sys.stderr.write('Request failed for {0}: Status code: {1.code} Reason: {1.reason}\n'.format(endpoint, e))
            
         return data
